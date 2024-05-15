@@ -11,8 +11,11 @@ app.use(express.json()) // allows the api to read json
 
 app.listen(PORT) // starts  up th api
 
-
+app.post('/isUp', (req, res) => {
+    res.status(200).send('OK');
+});
 // Get User data endpoint
+
 app.post('/getData', async (req, res) => {
     try {
         const username = req.body.username;
